@@ -81,8 +81,8 @@ open class MainActivity : AppCompatActivity() {
     public fun getFolderPermission() {
         val storageManager = application.getSystemService(Context.STORAGE_SERVICE) as StorageManager
         val intent = storageManager.primaryStorageVolume.createOpenDocumentTreeIntent()
-     //   val targetDirectory = "Android%2Fmedia%2Fcom.whatsapp%2FWhatsApp%2Fmedia%2F.Statuses"
-        val targetDirectory = Environment.getExternalStorageDirectory().absolutePath + "/WhatsApp/media/.Statuses"
+        val targetDirectory = "Android%2Fmedia%2Fcom.whatsapp%2FWhatsApp%2Fmedia%2F.Statuses"
+      //  val targetDirectory = Environment.getExternalStorageDirectory().absolutePath + "/WhatsApp/media/.Statuses"
 
         var uri = intent.getParcelableExtra<Uri>("android.provider.extra.INITIAL_URI") as Uri
         var scheme = uri.toString()
